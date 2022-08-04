@@ -104,10 +104,9 @@ for event in range(simulated):
                     continue
             daughtersLc[i.mcParticle().index()] = daughters
 
-    
-        
-    
 
+    #now try to reconstruct everything lol
+    
 
 # write file(s) with background data and vp/ms_hits (works)
 f1 = open('vertices.txt', 'w')
