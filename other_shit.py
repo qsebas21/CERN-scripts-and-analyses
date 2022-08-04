@@ -79,15 +79,34 @@ for i in parts:
         daughtersLc[i.index()] = daughters
             
             
-# reconstruct decays
+# reconstruct decays (doesn't work)
 for event in range(simulated):
     appMgr.run(1)
     parts = evt['/Event/MC/Particles']
     vp_hits = evt['/Event/MC/VP/Hits']
     ms_hits = evt['/Event/MC/MS/Hits']
     
-        
+    vp_decs = 0
+    ms_decs = 0
+    
+    #make daughters dictionary
+    daughtersLc = dict()
 
+    for i in vp_hits:
+        pid = i.mcParticle().particleID().pid()
+        if i.mcParticle().index() not in daughtersLc.keys() and (abs(pid) == 4214 or abs(pid) == 4122):
+            daughters = list()
+            for j in vp_hits:
+                try:
+                    if j.mother().index() == i.index():
+                        daughters.append(j)
+                except:
+                    continue
+            daughtersLc[i.mcParticle().index()] = daughters
+
+    for i in daughtersLc:
+        
+    
 
 
 # write file(s) with background data and vp/ms_hits (works)
