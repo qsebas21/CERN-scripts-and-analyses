@@ -1,4 +1,4 @@
-#check if there's lambda_c* and lambda_c in the same event
+#check if there's lambda_c* and lambda_c in the same event (works?)
 for event in range(simulated):
     appMgr.run(1)
     parts = evt['/Event/MC/Particles']
@@ -20,7 +20,7 @@ for event in range(simulated):
 print('There are ' + str(evts_with_both) + ' events with both.')
      
      
-#check what particles are there (with pid between 4000 and 4500) and how many
+#check what particles are there (with pid between 4000 and 4500) and how many (works)
 totalParts = dict()
 
 for event in range(simulated):
@@ -46,7 +46,7 @@ print(totalParts)
 
 
 
-#plot origin vertices of particles
+#plot origin vertices of particles (works)
 %matplotlib
 import matplotlib.pyplot as plt
 
@@ -64,7 +64,7 @@ for event in range(simulated):
 
 plt.scatter(z_pos, y_pos, s=0.1, alpha=0.1)
 
-#create a dictionary with the daughters of Lc_star only
+#create a dictionary with the daughters of Lc_star only (doesn't work, .sim file broken)
 daughtersLc = dict()
 
 for i in parts:
@@ -81,10 +81,16 @@ for i in parts:
             
 # reconstruct decays
 for event in range(simulated):
+    appMgr.run(1)
+    parts = evt['/Event/MC/Particles']
+    vp_hits = evt['/Event/MC/VP/Hits']
+    ms_hits = evt['/Event/MC/MS/Hits']
+    
+        
 
 
 
-# write file(s) with background data and vp/ms_hits 
+# write file(s) with background data and vp/ms_hits (works)
 f1 = open('vertices.txt', 'w')
 f2 = open('vp_hits.txt', 'w')
 f3 = open('ms_hits.txt', 'w')
