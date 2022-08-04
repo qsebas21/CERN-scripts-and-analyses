@@ -104,7 +104,7 @@ for event in range(simulated):
                     continue
             daughtersLc[i.mcParticle().index()] = daughters
 
-    for i in daughtersLc:
+    
         
     
 
