@@ -1,0 +1,114 @@
+ApplicationMgr       INFO Application Manager Started successfully
+EventSelector     SUCCESS Reading Event record 1. Record number within stream 1: 1
+EventSelector     SUCCESS Reading Event record 2. Record number within stream 1: 2
+EventSelector     SUCCESS Reading Event record 3. Record number within stream 1: 3
+EventSelector     SUCCESS Reading Event record 4. Record number within stream 1: 4
+EventSelector     SUCCESS Reading Event record 5. Record number within stream 1: 5
+EventSelector     SUCCESS Reading Event record 6. Record number within stream 1: 6
+Mother is particle 2918. Daughters are
+[2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211]
+EventSelector     SUCCESS Reading Event record 7. Record number within stream 1: 7
+EventSelector     SUCCESS Reading Event record 8. Record number within stream 1: 8
+EventSelector     SUCCESS Reading Event record 9. Record number within stream 1: 9
+EventSelector     SUCCESS Reading Event record 10. Record number within stream 1: 10
+EventSelector     SUCCESS Reading Event record 11. Record number within stream 1: 11
+EventSelector     SUCCESS Reading Event record 12. Record number within stream 1: 12
+EventSelector     SUCCESS Reading Event record 13. Record number within stream 1: 13
+EventSelector     SUCCESS Reading Event record 14. Record number within stream 1: 14
+EventSelector     SUCCESS Reading Event record 15. Record number within stream 1: 15
+EventSelector     SUCCESS Reading Event record 16. Record number within stream 1: 16
+EventSelector     SUCCESS Reading Event record 17. Record number within stream 1: 17
+EventSelector     SUCCESS Reading Event record 18. Record number within stream 1: 18
+EventSelector     SUCCESS Reading Event record 19. Record number within stream 1: 19
+EventSelector     SUCCESS Reading Event record 20. Record number within stream 1: 20
+EventSelector     SUCCESS Reading Event record 21. Record number within stream 1: 21
+EventSelector     SUCCESS Reading Event record 22. Record number within stream 1: 22
+EventSelector     SUCCESS Reading Event record 23. Record number within stream 1: 23
+EventSelector     SUCCESS Reading Event record 24. Record number within stream 1: 24
+EventSelector     SUCCESS Reading Event record 25. Record number within stream 1: 25
+EventSelector     SUCCESS Reading Event record 26. Record number within stream 1: 26
+EventSelector     SUCCESS Reading Event record 27. Record number within stream 1: 27
+EventSelector     SUCCESS Reading Event record 28. Record number within stream 1: 28
+EventSelector     SUCCESS Reading Event record 29. Record number within stream 1: 29
+EventSelector     SUCCESS Reading Event record 30. Record number within stream 1: 30
+EventSelector     SUCCESS Reading Event record 31. Record number within stream 1: 31
+EventSelector     SUCCESS Reading Event record 32. Record number within stream 1: 32
+EventSelector     SUCCESS Reading Event record 33. Record number within stream 1: 33
+EventSelector     SUCCESS Reading Event record 34. Record number within stream 1: 34
+EventSelector     SUCCESS Reading Event record 35. Record number within stream 1: 35
+EventSelector     SUCCESS Reading Event record 36. Record number within stream 1: 36
+EventSelector     SUCCESS Reading Event record 37. Record number within stream 1: 37
+EventSelector     SUCCESS Reading Event record 38. Record number within stream 1: 38
+EventSelector     SUCCESS Reading Event record 39. Record number within stream 1: 39
+Mother is particle 3767. Daughters are
+[2212, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211]
+EventSelector     SUCCESS Reading Event record 40. Record number within stream 1: 40
+EventSelector     SUCCESS Reading Event record 41. Record number within stream 1: 41
+EventSelector     SUCCESS Reading Event record 42. Record number within stream 1: 42
+EventSelector     SUCCESS Reading Event record 43. Record number within stream 1: 43
+EventSelector     SUCCESS Reading Event record 44. Record number within stream 1: 44
+EventSelector     SUCCESS Reading Event record 45. Record number within stream 1: 45
+EventSelector     SUCCESS Reading Event record 46. Record number within stream 1: 46
+EventSelector     SUCCESS Reading Event record 47. Record number within stream 1: 47
+EventSelector     SUCCESS Reading Event record 48. Record number within stream 1: 48
+EventSelector     SUCCESS Reading Event record 49. Record number within stream 1: 49
+EventSelector     SUCCESS Reading Event record 50. Record number within stream 1: 50
+EventSelector     SUCCESS Reading Event record 51. Record number within stream 1: 51
+EventSelector     SUCCESS Reading Event record 52. Record number within stream 1: 52
+EventSelector     SUCCESS Reading Event record 53. Record number within stream 1: 53
+EventSelector     SUCCESS Reading Event record 54. Record number within stream 1: 54
+EventSelector     SUCCESS Reading Event record 55. Record number within stream 1: 55
+EventSelector     SUCCESS Reading Event record 56. Record number within stream 1: 56
+EventSelector     SUCCESS Reading Event record 57. Record number within stream 1: 57
+EventSelector     SUCCESS Reading Event record 58. Record number within stream 1: 58
+EventSelector     SUCCESS Reading Event record 59. Record number within stream 1: 59
+EventSelector     SUCCESS Reading Event record 60. Record number within stream 1: 60
+EventSelector     SUCCESS Reading Event record 61. Record number within stream 1: 61
+EventSelector     SUCCESS Reading Event record 62. Record number within stream 1: 62
+EventSelector     SUCCESS Reading Event record 63. Record number within stream 1: 63
+EventSelector     SUCCESS Reading Event record 64. Record number within stream 1: 64
+EventSelector     SUCCESS Reading Event record 65. Record number within stream 1: 65
+EventSelector     SUCCESS Reading Event record 66. Record number within stream 1: 66
+EventSelector     SUCCESS Reading Event record 67. Record number within stream 1: 67
+EventSelector     SUCCESS Reading Event record 68. Record number within stream 1: 68
+EventSelector     SUCCESS Reading Event record 69. Record number within stream 1: 69
+EventSelector     SUCCESS Reading Event record 70. Record number within stream 1: 70
+EventSelector     SUCCESS Reading Event record 71. Record number within stream 1: 71
+Mother is particle 2417. Daughters are
+[2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 2212, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211]
+EventSelector     SUCCESS Reading Event record 72. Record number within stream 1: 72
+EventSelector     SUCCESS Reading Event record 73. Record number within stream 1: 73
+EventSelector     SUCCESS Reading Event record 74. Record number within stream 1: 74
+EventSelector     SUCCESS Reading Event record 75. Record number within stream 1: 75
+EventSelector     SUCCESS Reading Event record 76. Record number within stream 1: 76
+EventSelector     SUCCESS Reading Event record 77. Record number within stream 1: 77
+EventSelector     SUCCESS Reading Event record 78. Record number within stream 1: 78
+EventSelector     SUCCESS Reading Event record 79. Record number within stream 1: 79
+EventSelector     SUCCESS Reading Event record 80. Record number within stream 1: 80
+EventSelector     SUCCESS Reading Event record 81. Record number within stream 1: 81
+EventSelector     SUCCESS Reading Event record 82. Record number within stream 1: 82
+EventSelector     SUCCESS Reading Event record 83. Record number within stream 1: 83
+EventSelector     SUCCESS Reading Event record 84. Record number within stream 1: 84
+EventSelector     SUCCESS Reading Event record 85. Record number within stream 1: 85
+EventSelector     SUCCESS Reading Event record 86. Record number within stream 1: 86
+EventSelector     SUCCESS Reading Event record 87. Record number within stream 1: 87
+EventSelector     SUCCESS Reading Event record 88. Record number within stream 1: 88
+EventSelector     SUCCESS Reading Event record 89. Record number within stream 1: 89
+EventSelector     SUCCESS Reading Event record 90. Record number within stream 1: 90
+EventSelector     SUCCESS Reading Event record 91. Record number within stream 1: 91
+EventSelector     SUCCESS Reading Event record 92. Record number within stream 1: 92
+EventSelector     SUCCESS Reading Event record 93. Record number within stream 1: 93
+EventSelector     SUCCESS Reading Event record 94. Record number within stream 1: 94
+EventSelector     SUCCESS Reading Event record 95. Record number within stream 1: 95
+EventSelector     SUCCESS Reading Event record 96. Record number within stream 1: 96
+EventSelector     SUCCESS Reading Event record 97. Record number within stream 1: 97
+EventSelector     SUCCESS Reading Event record 98. Record number within stream 1: 98
+Mother is particle 7760. Daughters are
+[321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 321, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 211, 2212, 2212, 2212, 2212]
+EventSelector     SUCCESS Reading Event record 99. Record number within stream 1: 99
+EventSelector     SUCCESS Reading Event record 100. Record number within stream 1: 100
+EventSelector     SUCCESS Reading Event record 101. Record number within stream 1: 101
+There are 4 decays in VP.
+There are 0 decays in MS.
+The total gain is 1.0
+
