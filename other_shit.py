@@ -187,6 +187,6 @@ print('There are ' + str(vp_decs) + ' decays in VP.')
 print('There are ' + str(ms_decs) + ' decays in MS.')
 
 if vp_decs == 0:
-    print('Goddammit.')
+    print('No decays in VP.')
 else:
     print('The total gain is ' + str(1 + ms_decs/vp_decs))
