@@ -143,50 +143,79 @@ f3.close()
 #find if there are usable (Lc to p K pi) decays
 
 vp_decs = 0
+ut_hits = 0
 ms_decs = 0
+
 
 for event in range(simulated):
     appMgr.run(1)
     parts = evt['/Event/MC/Particles']
     vp_hits = evt['/Event/MC/VP/Hits']
-    ms_hits = evt['/Event/MC/MS/Hits'] 
+    ms_hits = evt['/Event/MC/MS/Hits']
+    ut_hits = evt['/Event/MC/UT/Hits']
     
     unique_Lc = list()    
     for i in parts:
         pid = i.particleID().pid()
-        if i.index() not in unique_Lc and abs(pid) == 4122:
-            daughters = list()
+        i_index = i.index()
+        if i_index not in unique_Lc and abs(pid) == 4122:
+            unique_Lc.append(i_index)
+            daughters = set()
             
             for j in vp_hits:
                 try:
-                    if j.mcParticle().mother().index() == i.index():
-                        daughters.append(abs(j.mcParticle().particleID().pid()))
+                    if j.mcParticle().mother().index() == i_index:
+                        daughters.add(abs(j.mcParticle().particleID().pid())) #append won't work
                 except:
                     continue
+                
+                if len(daughters) == 3:
+                    break
                     
             if 2212 in daughters and 211 in daughters and 321 in daughters:
                 vp_decs += 1
-                print('Mother is particle ' + str(i.index()) + '. Daughters are')
-                print(daughters)
+                #print('Mother is particle ' + str(i_index) + '. Daughters are')
+                #print(daughters)
                 
-            daughters = list()
+            daughters = set()
             
-            for k in ms_hits:
+            for k in ut_hits:
                 try:
-                    if k.mcParticle().mother().index() == i.index():
-                        daughters.append(abs(k.mcParticle().particleID().pid()))
+                    if j.mcParticle().mother().index() == i_index:
+                        daughters.add(abs(j.mcParticle().particleID().pid())) #append won't work
                 except:
                     continue
+                
+                if len(daughters) == 3:
+                    break
+                    
+            if 2212 in daughters and 211 in daughters and 321 in daughters:
+                ut_decs += 1
+                #print('Mother is particle ' + str(i_index) + '. Daughters are')
+                #print(daughters)
+                
+            daughters = set()
+            
+            for l in ms_hits:
+                try:
+                    if j.mcParticle().mother().index() == i_index:
+                        daughters.add(abs(j.mcParticle().particleID().pid())) #append won't work
+                except:
+                    continue
+                
+                if len(daughters) == 3:
+                    break
                     
             if 2212 in daughters or 211 in daughters or 321 in daughters:
                 ms_decs += 1
-                print('Mother is particle ' + str(i.index()) + '. Daughters are')
-                print(daughters)
+                #print('Mother is particle ' + str(i_index) + '. Daughters are')
+                #print(daughters)
                 
 print('There are ' + str(vp_decs) + ' decays in VP.')
+print('There are ' + str(ut_decs) + ' decays in UT.')
 print('There are ' + str(ms_decs) + ' decays in MS.')
 
-if vp_decs == 0:
-    print('No decays in VP.')
+if vp_decs + ut_decs == 0:
+    print('No decays in VP + UT.')
 else:
-    print('The total gain is ' + str(1 + ms_decs/vp_decs))
+    print('The total gain is ' + str(1 + ms_decs/(vp_decs + ut_decs)))
