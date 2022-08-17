@@ -143,7 +143,7 @@ f3.close()
 #find if there are usable (Lc to p K pi) decays
 
 vp_decs = 0
-ut_hits = 0
+ut_decs = 0
 ms_decs = 0
 
 
