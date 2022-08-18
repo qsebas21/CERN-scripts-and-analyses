@@ -50,6 +50,32 @@ print('The total is:')
 print(totalParts)
 
 
+#check if there's two Lc_star
+mults = 0
+mult = list()
+for event in range(simulated):
+    appMgr.run(1)
+    parts = evt['/Event/MC/Particles']
+    
+    Lcstars = 0
+    antis = 0
+    
+    for i in parts:
+        pid = i.particleID().pid()
+        if pid == 4214:
+            Lcstars += 1
+        if pid == -4214:
+            antis += 1
+    
+    if Lcstars > 2 or antis > 2:
+        mults += 1
+        mult.append(event + 1)
+    
+print(str(mults) + ' multiples')
+print('Events:')
+print(mult)
+
+    
 
 #plot origin vertices of particles (works)
 %matplotlib
