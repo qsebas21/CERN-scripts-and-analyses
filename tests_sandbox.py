@@ -141,16 +141,21 @@ for event in range(simulated):
     #now try to reconstruct everything lol
     
 
-# write file(s) with background data and vp/ms_hits (works)
+# write file(s) with background data and vp/ms/ut_hits (works)
+%matplotlib 
+import matplotlib.pyplot as plt
+
 f1 = open('vertices.txt', 'w')
 f2 = open('vp_hits.txt', 'w')
 f3 = open('ms_hits.txt', 'w')
+f4 = open('ut_hits.txt', 'w')
 
 for event in range(simulated):
     appMgr.run(1)
     parts = evt['/Event/MC/Particles']
     vp_hits = evt['/Event/MC/VP/Hits']
     ms_hits = evt['/Event/MC/MS/Hits']
+    ut_hits = evt['/Event/MC/UT/Hits']
     
     uniqueVerts = list()
     
@@ -169,9 +174,14 @@ for event in range(simulated):
         x, y, z = i.entry().Coordinates().x(), i.entry().Coordinates().y(), i.entry().Coordinates().z()
         f3.write(str(x) + ' ' + str(y) + ' ' + str(z) + '\n')
 
+    for i in ut_hits:
+        x, y, z = i.entry().Coordinates().x(), i.entry().Coordinates().y(), i.entry().Coordinates().z()
+        f4.write(str(x) + ' ' + str(y) + ' ' + str(z) + '\n')        
+    
 f1.close()
 f2.close()
 f3.close()
+f4.close()
 
 #find if there are usable (Lc to p K pi) decays
 

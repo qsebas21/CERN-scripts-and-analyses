@@ -33,15 +33,13 @@ for event in range(simulated):
     ms_hits = evt['/Event/MC/MS/Hits']
     ut_hits = evt['/Event/MC/UT/Hits']
     
-    unique_Lcstar = list()    
-    daughtersLc = dict()
+    #daughtersLc = dict()
     
     for i in parts:
         pid = i.particleID().pid()
         i_index = i.index()
         
-        if i_index not in unique_Lcstar and (abs(pid) == 4214 or abs(pid) == 4122):
-            unique_Lc.append(i_index)
+        if abs(pid) == 4122:
             daughters = set()
             
             for j in vp_hits:
@@ -61,8 +59,8 @@ for event in range(simulated):
             
             for k in ut_hits:
                 try:
-                    if j.mcParticle().mother().index() == i_index:
-                        daughters.add(abs(j.mcParticle().particleID().pid()))
+                    if k.mcParticle().mother().index() == i_index:
+                        daughters.add(abs(k.mcParticle().particleID().pid()))
                 except:
                     continue
                 
@@ -76,8 +74,8 @@ for event in range(simulated):
             
             for l in ms_hits:
                 try:
-                    if j.mcParticle().mother().index() == i_index:
-                        daughters.add(abs(j.mcParticle().particleID().pid()))
+                    if l.mcParticle().mother().index() == i_index:
+                        daughters.add(abs(l.mcParticle().particleID().pid()))
                 except:
                     continue
                 
