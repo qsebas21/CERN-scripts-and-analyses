@@ -424,3 +424,5 @@ if vp_decs + ut_decs == 0:
     print('No decays in VP + UT.')
 else:
     print('The total gain is ' + str(1 + ms_decs/(vp_decs + ut_decs)))
+    
+%history -o -f output.txt
