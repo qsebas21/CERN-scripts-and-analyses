@@ -107,31 +107,31 @@ for event in range(simulated):
     try:
         if (parts_dict[4214][0] in vp_parts or parts_dict[4214][1] in vp_parts or parts_dict[4214][2] in vp_parts) and parts_dict[4122][0] in vp_parts and parts_dict[4122][1] in vp_parts and parts_dict[4122][2] in vp_parts:
             vp_decs += 1
-        except:
-            if (parts_dict[-4214][0] in vp_parts or parts_dict[-4214][1] in vp_parts or parts_dict[-4214][2] in vp_parts) and parts_dict[-4122][0] in vp_parts and parts_dict[-4122][1] in vp_parts and parts_dict[-4122][2] in vp_parts:
+    except:
+        if (parts_dict[-4214][0] in vp_parts or parts_dict[-4214][1] in vp_parts or parts_dict[-4214][2] in vp_parts) and parts_dict[-4122][0] in vp_parts and parts_dict[-4122][1] in vp_parts and parts_dict[-4122][2] in vp_parts:
                 vp_decs += 1
             
     try:
         if (parts_dict[4214][0] in ut_parts or parts_dict[4214][1] in ut_parts or parts_dict[4214][2] in ut_parts) and parts_dict[4122][0] in ut_parts and parts_dict[4122][1] in ut_parts and parts_dict[4122][2] in ut_parts:
             ut_decs += 1
-        except:
-            if (parts_dict[-4214][0] in ut_parts or parts_dict[-4214][1] in ut_parts and parts_dict[-4214][2] in ut_parts) and parts_dict[-4122][0] in ut_parts and parts_dict[-4122][1] in ut_parts and parts_dict[-4122][2] in ut_parts:
+    except:
+        if (parts_dict[-4214][0] in ut_parts or parts_dict[-4214][1] in ut_parts and parts_dict[-4214][2] in ut_parts) and parts_dict[-4122][0] in ut_parts and parts_dict[-4122][1] in ut_parts and parts_dict[-4122][2] in ut_parts:
                 ut_decs += 1
     
     try:
         if (parts_dict[4214][0] in ms_parts or parts_dict[4214][1] in ms_parts or parts_dict[4214][2] in ms_parts) and (parts_dict[4122][0] in ms_parts or parts_dict[4122][1] in ms_parts or parts_dict[4122][2] in ms_parts):
             ms_decs += 1
-        except:
-            if (parts_dict[-4214][0] in ms_parts or parts_dict[-4214][1] in ms_parts or parts_dict[-4214][2] in ms_parts) and (parts_dict[-4122][0] in ms_parts or parts_dict[-4122][1] in ms_parts or parts_dict[-4122][2] in ms_parts):
+    except:
+        if (parts_dict[-4214][0] in ms_parts or parts_dict[-4214][1] in ms_parts or parts_dict[-4214][2] in ms_parts) and (parts_dict[-4122][0] in ms_parts or parts_dict[-4122][1] in ms_parts or parts_dict[-4122][2] in ms_parts):
                 ms_decs += 1
-                
-print('There are ' + str(vp_decs) + ' decays in VP.')
-print('There are ' + str(ut_decs) + ' decays in UT.')
-print('There are ' + str(ms_decs) + ' decays in MS.')
+                    
+with open("output.txt", "w") as f:
+    print('There are ' + str(vp_decs) + ' decays in VP.', file=f)
+    print('There are ' + str(ut_decs) + ' decays in UT.', file=f)
+    print('There are ' + str(ms_decs) + ' decays in MS.', file=f)
 
-if vp_decs + ut_decs == 0:
-    print('No decays in VP + UT.')
-else:
-    print('The total gain is ' + str(1 + ms_decs/(vp_decs + ut_decs)))
-    
-%history -o -f output.txt
+    if vp_decs + ut_decs == 0:
+        print('No decays in VP + UT.', file=f)
+    else:
+        print('The total gain is ' + str(1 + ms_decs/(vp_decs + ut_decs)), file=f)
+
