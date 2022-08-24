@@ -87,19 +87,19 @@ for event in range(simulated):
     vp_parts = set()
     for i in vp_hits:
         i_pid = i.mcParticle().particleID().pid()
-        if abs(pid) in good_pids:
+        if abs(i_pid) in good_pids:
             vp_parts.add(i.mcParticle())
 
     ut_parts = set()
     for i in ut_hits:
         i_pid = i.mcParticle().particleID().pid()
-        if abs(pid) in good_pids:
+        if abs(i_pid) in good_pids:
             ut_parts.add(i.mcParticle())
                     
     ms_parts = set()
     for i in ms_hits:
         i_pid = i.mcParticle().particleID().pid()
-        if abs(pid) in good_pids:
+        if abs(i_pid) in good_pids:
             ms_parts.add(i.mcParticle())        
     
     #check if daughters were detected by VP/UT/MS
