@@ -48,8 +48,8 @@ for event in range(simulated):
                 try:
                     if j.mother().index() == i_index:
                         daughters_pid.add(j.particleID().pid())
-                        daughters_parts.add(j)
-                except:
+                        daughters_parts.add(j)           #index!!!!
+                except: # add error catchings
                     continue
                 if len(daughters_pid) == 3:
                     break
@@ -88,22 +88,25 @@ for event in range(simulated):
     for i in vp_hits:
         i_pid = i.mcParticle().particleID().pid()
         if abs(i_pid) in good_pids:
-            vp_parts.add(i.mcParticle())
+            vp_parts.add(i.mcParticle()) ##index
 
     ut_parts = set()
     for i in ut_hits:
         i_pid = i.mcParticle().particleID().pid()
         if abs(i_pid) in good_pids:
-            ut_parts.add(i.mcParticle())
+            ut_parts.add(i.mcParticle()) ##index
                     
     ms_parts = set()
     for i in ms_hits:
         i_pid = i.mcParticle().particleID().pid()
         if abs(i_pid) in good_pids:
-            ms_parts.add(i.mcParticle())        
+            ms_parts.add(i.mcParticle()) ##index       
     
     #check if daughters were detected by VP/UT/MS
-    
+    #if 4214 in keys, sign = 1 (in keys, 4214*sign)
+    #index in parts and use pid
+    #check for both pions of Lcstar
+    #run sceript to see how many good decays switching K and pi signs
     try:
         if (parts_dict[4214][0] in vp_parts or parts_dict[4214][1] in vp_parts or parts_dict[4214][2] in vp_parts) and parts_dict[4122][0] in vp_parts and parts_dict[4122][1] in vp_parts and parts_dict[4122][2] in vp_parts:
             vp_decs += 1
