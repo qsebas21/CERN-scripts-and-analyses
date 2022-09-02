@@ -267,7 +267,6 @@ else:
     
 #check for full (Lc* to (Lc to pKpi) pi pi) decays (surface level) 
 good_decs = 0
-decs = list()
 for event in range(simulated):
     appMgr.run(1)
     parts = evt['/Event/MC/Particles']
@@ -286,28 +285,29 @@ for event in range(simulated):
                         daughters.add(j.particleID().pid())
                 except:
                     continue
+                if len(daughters) == 3:
+                    break
             daughtersLc[pid] = daughters
     
     #if daughtersLc is not False:
     #    print('\nEvent:' + str(event + 1))        
     #    print(daughtersLc)
     
-    try:
-        if 4122 in daughtersLc[4214] and 211 in daughtersLc[4214] and 2212 in daughtersLc[4122] and 211 in daughtersLc[4122] and -321 in daughtersLc[4122]:
+    sign = 1
+    if -4214 in daughtersLc.keys():
+        sign = -1
+        
+    if 4214 not in daughtersLc.keys() and -4214 not in daughtersLc.keys():
+        print('Event ' + str(event + 1) + 'has no Lcstar or antiLcstar')
+        continue
+    
+    if sign*4122 in daughtersLc[sign*4214] and 211 in daughtersLc[sign*4214] and sign*2212 in daughtersLc[sign*4122] and sign*211 in daughtersLc[sign*4122] and -sign*321 in daughtersLc[sign*4122]:
             good_decs += 1
-            decs.append(event + 1)
-    except:
-        try:
-            if -4122 in daughtersLc[-4214] and 211 in daughtersLc[-4214] and -2212 in daughtersLc[-4122] and -211 in daughtersLc[-4122] and 321 in daughtersLc[-4122]: 
-                good_decs += 1
-                decs.append(event + 1)
-        except:
-            print(' ')
-
-print('There are ' + str(good_decs) + ' good decays. The following events contain good decays:')
-print(decs)
-
-
+    
+    if sign*4122 in daughtersLc[sign*4214] and 211 in daughtersLc[sign*4214] and sign*2212 in daughtersLc[sign*4122] and -sign*211 in daughtersLc[sign*4122] and sign*321 in daughtersLc[sign*4122]:
+            good_decs += 1    
+    
+print('There are ' + str(good_decs) + ' good decays.')
 
 
 ### finally
