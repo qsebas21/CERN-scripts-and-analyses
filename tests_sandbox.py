@@ -301,11 +301,13 @@ for event in range(simulated):
         print('Event ' + str(event + 1) + 'has no Lcstar or antiLcstar')
         continue
     
-    if sign*4122 in daughtersLc[sign*4214] and 211 in daughtersLc[sign*4214] and sign*2212 in daughtersLc[sign*4122] and sign*211 in daughtersLc[sign*4122] and -sign*321 in daughtersLc[sign*4122]:
-            good_decs += 1
-    
-    if sign*4122 in daughtersLc[sign*4214] and 211 in daughtersLc[sign*4214] and sign*2212 in daughtersLc[sign*4122] and -sign*211 in daughtersLc[sign*4122] and sign*321 in daughtersLc[sign*4122]:
-            good_decs += 1    
+    if sign*4122 in daughtersLc[sign*4214]\
+        and -sign*211 in daughtersLc[sign*4214]\ 
+        and sign*2212 in daughtersLc[sign*4122]\
+        and ((211 in daughtersLc[sign*4122] and -321 in daughtersLc[sign*4122])\
+             or (-211 in daughtersLc[sign*4122] and 321 in daughtersLc[sign*4122])):
+        good_decs += 1
+
     
 print('There are ' + str(good_decs) + ' good decays.')
 
